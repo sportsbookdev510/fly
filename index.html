@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLYCOIN | $FLY on Robinhood</title>
+    <meta
+      name="description"
+      content="FLYCOIN ($FLY) — the fly of Robinhood chain. Trade on Uniswap."
+    />
+    <link rel="icon" href="logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <canvas id="flies" aria-hidden="true"></canvas>
+    <div class="fly-layer" aria-hidden="true">
+      <span class="fly-dom" style="--d:0s;--t:18s;--s:1.15;--p:fly-a"></span>
+      <span class="fly-dom" style="--d:2s;--t:22s;--s:0.85;--p:fly-b"></span>
+      <span class="fly-dom" style="--d:5s;--t:16s;--s:1.35;--p:fly-c"></span>
+      <span class="fly-dom" style="--d:1s;--t:26s;--s:0.7;--p:fly-d"></span>
+      <span class="fly-dom" style="--d:8s;--t:20s;--s:1;--p:fly-e"></span>
+      <span class="fly-dom" style="--d:3s;--t:14s;--s:0.9;--p:fly-f"></span>
+    </div>
+
+    <nav class="nav">
+      <a class="nav-brand" href="#top">
+        <img src="logo.png" alt="FLYCOIN logo" />
+        <span>FLYCOIN</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#howtobuy">How to Buy</a>
+        <a href="#join">Join Us</a>
+        <a
+          class="btn btn-green btn-nav"
+          href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xComingSoon"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Buy $FLY</a
+        >
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <div class="hero-copy">
+        <p class="kicker">
+          <span class="dot"></span>
+          Robinhood Chain · Uniswap
+        </p>
+        <h1>FLYCOIN</h1>
+        <p class="ticker-mark">$FLY</p>
+        <p class="lede">
+          The fly that landed on Robinhood. Same green. New wings. Trade $FLY on
+          Uniswap.
+        </p>
+        <div class="ca-row">
+          <span class="ca-label">CA</span>
+          <code id="ca">0xComingsoon</code>
+          <button class="copy-btn" type="button" data-copy="0xComingsoon">
+            Copy
+          </button>
+        </div>
+        <div class="hero-actions">
+          <a
+            class="btn btn-green btn-lg"
+            href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xComingSoon"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Buy on Uniswap</a
+          >
+          <a
+            class="btn btn-ghost btn-lg"
+            href="https://x.com/flyonrobin"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Follow @flyonrobin</a
+          >
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="logo-orbit">
+          <img class="hero-logo" src="logo.png" alt="FLYCOIN fly" />
+        </div>
+        <svg class="sparkline" viewBox="0 0 320 90" aria-hidden="true">
+          <defs>
+            <linearGradient id="fillG" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#00C805" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#00C805" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <path
+            class="spark-fill"
+            d="M0,70 C20,68 40,60 60,62 C90,66 110,40 140,36 C170,32 190,48 220,28 C250,10 280,18 320,8 L320,90 L0,90 Z"
+          />
+          <path
+            class="spark-line"
+            d="M0,70 C20,68 40,60 60,62 C90,66 110,40 140,36 C170,32 190,48 220,28 C250,10 280,18 320,8"
+          />
+        </svg>
+      </div>
+    </header>
+
+    <div class="banner-wrap reveal">
+      <img src="banner.png" alt="FLYCOIN $FLY banner" />
+    </div>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>FLYCOIN</span><span>$FLY</span><span>ROBINHOOD CHAIN</span
+        ><span>UNISWAP</span><span>LET IT FLY</span><span>0xComingsoon</span>
+        <span>FLYCOIN</span><span>$FLY</span><span>ROBINHOOD CHAIN</span
+        ><span>UNISWAP</span><span>LET IT FLY</span><span>0xComingsoon</span>
+      </div>
+    </div>
+
+    <section class="stats">
+      <div class="stat">
+        <span>Token</span>
+        <strong>FLYCOIN</strong>
+      </div>
+      <div class="stat">
+        <span>Symbol</span>
+        <strong>$FLY</strong>
+      </div>
+      <div class="stat">
+        <span>Network</span>
+        <strong>Robinhood</strong>
+      </div>
+      <div class="stat">
+        <span>DEX</span>
+        <strong>Uniswap</strong>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-head reveal">
+        <p class="kicker"><span class="dot"></span> About</p>
+        <h2>A fly. A ticker.<br />A chain that finally opened.</h2>
+      </div>
+      <div class="about-grid">
+        <article class="card reveal">
+          <h3>What is FLYCOIN?</h3>
+          <p>
+            FLYCOIN is <strong>$FLY</strong> — a community token on the
+            Robinhood chain, trading on Uniswap. Robinhood green, fly energy.
+            No lectures. No sitting still. The swarm moves.
+          </p>
+        </article>
+        <article class="card reveal">
+          <h3>Why the fly?</h3>
+          <p>
+            Because it lands wherever it wants. FLYCOIN is the meme that
+            showed up the moment Uniswap met Robinhood — pale wings, red eyes,
+            charts that refuse to stay grounded.
+          </p>
+        </article>
+        <article class="card reveal">
+          <h3>Where it lives</h3>
+          <p>
+            Built for Robinhood chain. Swapped on Uniswap. Nested at
+            <a href="https://x.com/flyonrobin" target="_blank" rel="noopener noreferrer">@flyonrobin</a>.
+            Contract is <strong>0xComingsoon</strong> — tap Buy when you are
+            ready to join the swarm.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="howtobuy" class="section">
+      <div class="section-head reveal">
+        <p class="kicker"><span class="dot"></span> How to Buy</p>
+        <h2>Four steps. Then fly.</h2>
+      </div>
+      <ol class="steps">
+        <li class="card step reveal">
+          <span class="step-num">01</span>
+          <h3>Open Uniswap</h3>
+          <p>
+            Go to Uniswap on the Robinhood chain. Hit Buy $FLY — the route is
+            already set to native in, $FLY out.
+          </p>
+        </li>
+        <li class="card step reveal">
+          <span class="step-num">02</span>
+          <h3>Connect a wallet</h3>
+          <p>
+            Connect a wallet that supports Robinhood chain. Approve the
+            connection and you are in the nest.
+          </p>
+        </li>
+        <li class="card step reveal">
+          <span class="step-num">03</span>
+          <h3>Swap for $FLY</h3>
+          <p>
+            Confirm the pair. Output is FLYCOIN. CA
+            <strong>0xComingsoon</strong> — verify it matches before you send.
+          </p>
+        </li>
+        <li class="card step reveal">
+          <span class="step-num">04</span>
+          <h3>Let it fly</h3>
+          <p>
+            Confirm the swap. $FLY is yours. Welcome to the swarm — now go
+            follow the nest.
+          </p>
+        </li>
+      </ol>
+      <div class="center reveal">
+        <a
+          class="btn btn-green btn-lg"
+          href="https://app.uniswap.org/swap?chain=robinhood&inputCurrency=NATIVE&outputCurrency=0xComingSoon"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Buy $FLY on Uniswap</a
+        >
+      </div>
+    </section>
+
+    <section id="join" class="section join">
+      <div class="join-card reveal">
+        <p class="kicker"><span class="dot"></span> Join Us</p>
+        <h2>The swarm is forming.</h2>
+        <p>
+          Official nest is
+          <a href="https://x.com/flyonrobin" target="_blank" rel="noopener noreferrer">@flyonrobin</a>
+          on X. Follow for CA updates, swarm calls, and whatever the fly does
+          next.
+        </p>
+        <a
+          class="btn btn-green btn-lg"
+          href="https://x.com/flyonrobin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.727-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+            />
+          </svg>
+          Follow @flyonrobin
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a class="nav-brand" href="#top">
+        <img src="logo.png" alt="" />
+        <span>FLYCOIN</span>
+      </a>
+      <p>$FLY · Robinhood Chain · Uniswap</p>
+      <p class="fine">Not financial advice. Memes have wings.</p>
+    </footer>
+
+    <div class="toast" id="toast" role="status">Copied</div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
